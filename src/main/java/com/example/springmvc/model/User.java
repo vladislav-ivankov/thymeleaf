@@ -3,7 +3,6 @@ package com.example.springmvc.model;
 import com.example.springmvc.util.IdGenerator;
 
 public class User {
-    private int id;
     private String Username;
     private int age;
     private String email;
@@ -13,19 +12,14 @@ public class User {
     }
 
     public User(String username, int age, String email, long phoneNumber) {
-        this.id = IdGenerator.userIdGenerator();
-        Username = username;
+        this.Username = username;
         this.age = age;
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
 
     public int getId() {
-        return id;
-    }
-
-    public void setId() {
-        this.id = IdGenerator.userIdGenerator();
+        return IdGenerator.userIdGenerator();
     }
 
     public String getUsername() {
